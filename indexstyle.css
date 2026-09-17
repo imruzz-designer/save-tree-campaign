@@ -1,0 +1,531 @@
+/* ------------------------------
+   BASIC RESET
+--------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #183b24;
+    background: #f7f9f4;
+    line-height: 1.6;
+}
+
+
+/* ------------------------------
+   NAVIGATION
+--------------------------------*/
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e5eadf;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #174c2a;
+}
+
+.logo span {
+    color: #72a83b;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #28452f;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #5d9635;
+}
+
+
+/* ------------------------------
+   HERO
+--------------------------------*/
+
+.hero {
+    min-height: 90vh;
+
+    background:
+        linear-gradient(
+            rgba(10, 45, 23, 0.60),
+            rgba(10, 45, 23, 0.60)
+        ),
+        url("images/forest.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 80px 25px;
+    color: white;
+}
+
+.small-title {
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(48px, 7vw, 90px);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.hero p:not(.small-title) {
+    max-width: 600px;
+    font-size: 19px;
+    margin-bottom: 35px;
+}
+
+
+/* ------------------------------
+   BUTTON
+--------------------------------*/
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #7cad42;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #527d2b;
+    transform: translateY(-2px);
+}
+
+
+/* ------------------------------
+   GENERAL SECTIONS
+--------------------------------*/
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 25px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading p {
+    color: #78a33d;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 45px;
+    color: #173d24;
+}
+
+
+/* ------------------------------
+   ABOUT
+--------------------------------*/
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about-text h3 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #5d695f;
+    margin-bottom: 18px;
+}
+
+.stats {
+    display: flex;
+    gap: 35px;
+    margin-top: 30px;
+}
+
+.stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats strong {
+    font-size: 28px;
+    color: #649535;
+}
+
+.stats span {
+    color: #667066;
+    font-size: 14px;
+}
+
+
+/* ------------------------------
+   CAMPAIGN
+--------------------------------*/
+
+.campaign {
+    background: #eaf1e4;
+    padding: 100px 25px;
+}
+
+.campaign .section-heading {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 40px 30px;
+
+    border-radius: 5px;
+
+    box-shadow: 0 10px 30px rgba(28, 58, 32, 0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card-icon {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #687269;
+}
+
+
+/* ------------------------------
+   NEWS
+--------------------------------*/
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.news-card {
+    background: white;
+    border: 1px solid #e3e9df;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(30, 60, 30, 0.10);
+}
+
+.news-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.date {
+    color: #79a442;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.news-content h3 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.news-content p {
+    color: #687269;
+    margin-bottom: 18px;
+}
+
+.news-content a {
+    color: #5d9134;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* ------------------------------
+   QUOTE
+--------------------------------*/
+
+.quote {
+    background: #173d24;
+    color: white;
+    padding: 90px 25px;
+    text-align: center;
+}
+
+.quote div {
+    max-width: 850px;
+    margin: auto;
+}
+
+.quote p {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.quote span {
+    color: #bdd29f;
+}
+
+
+/* ------------------------------
+   GALLERY
+--------------------------------*/
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+
+/* ------------------------------
+   CONTACT
+--------------------------------*/
+
+.contact {
+    background:
+        linear-gradient(
+            rgba(18, 63, 32, 0.86),
+            rgba(18, 63, 32, 0.86)
+        ),
+        url("images/nature.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    text-align: center;
+
+    padding: 110px 25px;
+}
+
+.contact-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.contact h2 {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.contact p:not(.small-title) {
+    margin-bottom: 30px;
+}
+
+
+/* ------------------------------
+   FOOTER
+--------------------------------*/
+
+footer {
+    background: #0e2818;
+    color: white;
+    text-align: center;
+    padding: 45px 25px;
+}
+
+.footer-logo {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aebdac;
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+--------------------------------*/
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cards,
+    .news-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .section {
+        padding: 70px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .cards,
+    .news-container,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+    }
+
+    .quote p {
+        font-size: 28px;
+    }
+
+    .contact h2 {
+        font-size: 38px;
+    }
+
+}
